@@ -1,0 +1,11 @@
+ADMIN(id_admin, nom, email, mot_de_passe, date_creation)
+
+AGENTSANTE(id_agent, nom, prenom, email, mot_de_passe, specialite, id_centre (FK), id_admin (FK))
+
+CENTRESANTE(id_centre, nom_centre, adresse, ville, email, telephone, logo_centre)
+
+PATIENT(id_patient, nom, prenom, date_naissance, sexe, telephone, id_agent (FK), image_frottis, date_envoi)
+
+RESULTATANALYSE(id_analyse, id_patient (FK), resultat, confiance, date_analyse)
+
+RAPPORTPDF(id_rapport, id_analyse (FK), fichier_rapport, date_generation)
