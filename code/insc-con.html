@@ -4,14 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>All Products - Redstore</title>
+        <title>Insc-Conn</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="nav.css">
 
     </head>
     <body>
       
         <div class ="header">
-            <div class="container">
+            <div class="containernav">
                 <div class="navbar">
                     <div class="logo">
                         
@@ -19,7 +20,7 @@
                     <nav>
                         <ul id="MenuItems">
                             <li><a href="index.html">Accueil</a></li>
-                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="dashboard.html">Dashboard</a></li>
                             <li><a href="insc-con.html">Se connecter</a></li>
                         </ul>
                     </nav>
@@ -35,23 +36,16 @@
                     <div class="col-2">
                         <div class="form-container">
                             <div class="form-btn">
-                                <span onclick="login()">Se connecter</span>
-                                <span onclick="register()">S'inscrire</span>
+                                <span>Se connecter</span>
                                 <hr id="Indicator">
                             </div>
                             <form id="LoginForm">
-                                <input type="text" placeholder="username" required>
+                                <input type="email" placeholder="email" required>
                                 <input type="password" placeholder="password" required>
                                 <button type="submit" class="btn">Se connecter</button>
                                 <a href="">Mot de passe oubié</a>
                             </form>
-                            
-                            <form id="RegForm">
-                                <input type="text" placeholder="username" required>
-                                <input type="email" placeholder="email" required>
-                                <input type="password" placeholder="password" required>
-                                <button type="submit" class="btn">S'inscrire</button>
-                            </form>
+                                            
                         </div>
                     </div>
                 </div>
@@ -59,38 +53,7 @@
             </div>
         </div>
         
-        <!-----------------------------------js for toggle menu-------------------------------------->
-        <script>
-            var menuItems=document.getElementById("MenuItems");
-            
-            MenuItems.style.maxHeight="0px";
-            function menutoggle(){
-                if(MenuItems.style.maxHeight == "0px"){
-                    MenuItems.style.maxHeight="200px";
-                }
-                else{
-                    MenuItems.style.maxHeight="0px";
-                }
-            }
-        </script>
-        
-                <!-----------------------------------js for toggle form-------------------------------------->
-        <script>
-            var LoginForm=document.getElementById("LoginForm");
-            var RegForm=document.getElementById("RegForm");
-            var Indicator=document.getElementById("Indicator");
-            
-            function register(){
-                RegForm.style.transform="translateX(0px)";
-                LoginForm.style.transform="translateX(0px)";
-                Indicator.style.transform="translateX(100px)"
-            }
-            function login(){
-                RegForm.style.transform="translateX(300px)";
-                LoginForm.style.transform="translateX(300px)";
-                Indicator.style.transform="translateX(0px)";
-            }
-        </script>
+      
 
     </body>
 </html>

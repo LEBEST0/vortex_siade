@@ -1,0 +1,165 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(#fff, #e2f3ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* En-tête */
+h2 {
+    text-align: center;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Styles des cartes */
+.card {
+    max-width: 90%;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px #261d6098;
+    border: none;
+    margin: 10px auto; /* Centre horizontalement */
+    display: block; /* Permet d'appliquer le centrage */
+}
+
+.titre-niveau3 {
+    font-size:  24px;
+    font-weight: 600;
+    color: #261d60;
+    margin-bottom: 15px;
+}
+
+/* Boutons */
+.btn {
+    border-radius: 5px;
+    width: 200px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #003d80;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+/* Table */
+.table {
+    margin-top: 15px;
+}
+
+.table th {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+}
+
+/* Conteneur de la prévisualisation */
+.preview-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Cadre de l'image téléversée */
+#previewImage {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Caché par défaut */
+    margin: 10px auto; /* Centre horizontalement */
+    display: block; /* Permet d'appliquer le centrage */
+}
+
+/* Texte indicatif */
+#imageLabel {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Animation de chargement */
+.loading {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.loading::after {
+    content: " .";
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: " ."; }
+    40% { content: " .."; }
+    60% { content: " ..."; }
+    100% { content: " ."; }
+}
+
+
+/* Historique */
+#historyTable button {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
