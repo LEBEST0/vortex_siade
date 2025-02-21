@@ -1,0 +1,180 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #E3F2FD; /* Bleu clair doux pour l'arrière-plan */
+    color: #333;
+}
+
+/* Navigation */
+nav.admin-nav {
+    background: #1565C0; /* Bleu foncé */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav.admin-nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+nav.admin-nav .logo-img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+nav.admin-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav.admin-nav ul li {
+    margin-left: 15px;
+}
+
+nav.admin-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+nav.admin-nav ul li a:hover {
+    background: #0D47A1; /* Bleu encore plus foncé pour l'effet de survol */
+    border-radius: 5px;
+}
+
+/* Main content */
+.admin-content {
+    margin: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    background: #1E88E5; /* Bleu vif pour les boutons */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #1565C0; /* Bleu foncé pour l'effet de survol */
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background: #1565C0; /* Bleu foncé pour l'entête */
+    color: white;
+}
+
+.table td {
+    background: #E3F2FD; /* Bleu clair pour les cellules */
+}
+
+/* Charts */
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Section Info Centre */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    color: #1976D2; /* Bleu moyen pour les titres */
+}
+
+.logo-preview {
+    width: 100%;
+    height: 150px;
+    border: 1px dashed #1976D2; /* Bleu moyen pour les bordures */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BBDEFB; /* Bleu clair pour les bordures */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #1E88E5; /* Bleu vif pour le focus */
+}
+
+.info-card .btn {
+    margin-top: 15px;
+    width: 100%;
+}

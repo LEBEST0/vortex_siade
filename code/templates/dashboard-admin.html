@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/css/dashboard-admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="admin-nav">
+        <div class="logo">
+            <img src="logo.png" alt="" class="logo-img"> Admin Dashboard
+        </div>
+        <ul>
+            <li><a href="#users">Gestion des Utilisateurs</a></li>
+            <li><a href="#analyses">Supervision des Analyses</a></li>
+            <li><a href="#info">Info Centre de Santé</a></li>
+            <li><a href="#" id="logout-btn">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Tableau de bord -->
+    <main class="admin-content">
+        <!-- Gestion des Utilisateurs -->
+        <section id="users" class="section">
+            <h2>Gestion des Utilisateurs</h2>
+            <button id="add-user-btn" class="btn">Ajouter un utilisateur</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table"></tbody>
+            </table>
+        </section>
+
+        <!-- Supervision des Analyses -->
+        <section id="analyses" class="section">
+            <h2>Supervision des Analyses</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Analyse</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="analysis-table"></tbody>
+            </table>
+        </section>
+
+        <!-- Info Centre de Santé -->
+        <section id="info" class="section">
+            <h2>Informations du Centre de Santé</h2>
+            <div class="info-grid">
+                <!-- Carte Logo -->
+                <div class="info-card">
+                    <h3>Logo du Centre</h3>
+                    <div class="logo-preview">
+                        <img src="placeholder.png" id="logo-preview" alt="Aucun logo téléversé">
+                    </div>
+                    <input type="file" id="center-logo" accept="image/*">
+                </div>
+
+                <!-- Carte Informations -->
+                <div class="info-card">
+                    <h3>Détails du Centre</h3>
+                    <form id="info-form">
+                        <div class="form-group">
+                            <label for="center-name">Nom :</label>
+                            <input type="text" id="center-name" placeholder="Nom du centre">
+                        </div>
+                        <div class="form-group">
+                            <label for="center-location">Localisation :</label>
+                            <input type="text" id="center-location" placeholder="Ville, Quartier, Commune">
+                        </div>
+                        <div class="form-group">
+                            <label for="center-email">Email :</label>
+                            <input type="email" id="center-email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="center-phone">Téléphone :</label>
+                            <input type="tel" id="center-phone" placeholder="Téléphone">
+                        </div>
+                        <button type="submit" class="btn">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="ad.js"></script>
+</body>
+</html>
