@@ -40,6 +40,9 @@ class AgentSante(db.Model):
     id_centre = db.Column(db.Integer, db.ForeignKey('centre_sante.id_centre', ondelete="CASCADE"), nullable=False)
     id_admin = db.Column(db.Integer, db.ForeignKey('admin.id_admin', ondelete="CASCADE"), nullable=False)
 
+    #Relation avec patient
+    patients = db.relationship('Patient', backref='agent', lazy=True)
+
 # Modèle Patient
 class Patient(db.Model):
     id_patient = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -51,6 +54,9 @@ class Patient(db.Model):
     id_agent = db.Column(db.Integer, db.ForeignKey('agent_sante.id_agent', ondelete="CASCADE"), nullable=False)
     image_frottis = db.Column(db.Text, nullable=False)
     date_envoi = db.Column(db.TIMESTAMP, server_default=db.func.current_timestamp())
+
+    # Relation avec ResultatAnalyse
+    analyses = db.relationship('ResultatAnalyse', backref='patient', lazy=True)
 
 # Modèle ResultatAnalyse
 class ResultatAnalyse(db.Model):

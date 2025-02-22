@@ -19,6 +19,19 @@ db.init_app(app)
 # Importation des modèles après l'initialisation
 from models import Admin, CentreSante, AgentSante, Patient, ResultatAnalyse, RapportPDF
 
+#agent sante
+@app.route('/')
+def acceuil():
+    return render_template('index.html')  
+@app.route('/dashboardAgent')
+def dashboardAgent():
+    return render_template('dashboard.html')  
+@app.route('/connexion')
+def connexion():
+    return render_template('connexion.html')
+
+
+#admin
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Agent de Santé</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboardAgent.css') }}">
     
 </head>
 <body>
@@ -18,10 +18,10 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="insc-con.html">Se connecter</a></li>
-                    </ul>
+                        <li><a href="{{ url_for('acceuil') }}">Accueil</a></li>
+                        <li><a href="{{ url_for('dashboardAgent') }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('connexion') }}">Se connecter</a></li>
+                    </ul>                    
                 </nav>
             </div>
         </div>
@@ -107,7 +107,7 @@
             </table>
         </div>
     </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 
-    <script src="dashboard.js"></script>
 </body>
 </html>

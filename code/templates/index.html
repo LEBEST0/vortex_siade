@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MalariaVision AI</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -18,10 +18,10 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="insc-con.html">Se connecter</a></li>
-                    </ul>
+                        <li><a href="{{ url_for('acceuil') }}">Accueil</a></li>
+                        <li><a href="{{ url_for('dashboardAgent') }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('connexion') }}">Se connecter</a></li>
+                    </ul>                    
                 </nav>
             </div>
             <div class="row" style="margin-left: 30px;">
@@ -31,7 +31,7 @@
                     <a href="products.html" class="btn">Commencez l’analyse maintenant ! &#8594;</a>
                 </div>                
                 <div class="col-2">
-                    <img src="image/imgAcceuil.jpg" >
+                    <img src="{{ url_for('static', filename='images/imgAcceuil.jpg') }}" alt="Image d'accueil">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                     détaillé avec un score de confiance.
                 </p>
             </div>
-            <img src="image/test-tube-with-blood-sample-covid-19-test.jpg" alt="Illustration du projet">
+            <img src="{{ url_for('static', filename='images/test-tube-with-blood-sample-covid-19-test.jpg') }}" alt="Illustration du projet">
         </div>
     </section>
     <br>
@@ -63,7 +63,7 @@
     <!-- Présentation détaillée du projet -->
     <section class="presentation">
         <div class="container">
-            <img src="image/coronavirus-blood-samples-assortment-lab.jpg" alt="Présentation du projet">
+            <img src="{{ url_for('static', filename='images/coronavirus-blood-samples-assortment-lab.jpg') }}" alt="Présentation du projet">
             <div class="text">
                 <h3 class="titre-niveau3">Pourquoi MalariaVision AI ?</h3>
                 <p>
@@ -86,19 +86,19 @@
         <h3 class="titre-niveau3">Comment fonctionne MalariaVision AI ?</h3>
         <div class="steps">
             <div class="step">
-                <img src="image/biologist-woman-examining-biological-slide-medical-expertise-using-microscope.jpg" alt="Acquisition de l’image">
+                <img src="{{ url_for('static', filename='images/biologist-woman-examining-biological-slide-medical-expertise-using-microscope.jpg') }}" alt="Acquisition de l’image">
                 <p><strong>1. Capture de l’image :</strong> Le technicien place l’échantillon sous un microscope numérique et capture une image haute résolution.</p>
             </div>
             <div class="step">
-                <img src="image/3d-render-blood-cells-abstract-background.jpg" alt="Analyse par l’IA">
+                <img src="{{ url_for('static', filename='images/3d-render-blood-cells-abstract-background.jpg') }}" alt="Analyse par l’IA">
                 <p><strong>2. Analyse par l’IA :</strong> L’image est traitée par notre algorithme de vision par ordinateur, qui identifie les parasites responsables du paludisme.</p>
             </div>
             <div class="step">
-                <img src="image/score de confiance.webp" alt="Affichage des résultats">
+                <img src="{{ url_for('static', filename='images/score de confiance.webp') }}" alt="Affichage des résultats">
                 <p><strong>3. Résultats détaillés :</strong> L’IA fournit un rapport avec un taux d’infection estimé et un score de confiance sur la détection.</p>
             </div>
             <div class="step">
-                <img src="image/stockage.webp" alt="Archivage">
+                <img src="{{ url_for('static', filename='images/stockage.webp') }}" alt="Archivage">
                 <p><strong>4. Archivage & amélioration :</strong> Les résultats sont stockés de manière sécurisée pour suivre l’évolution des patients et affiner le modèle d’IA.</p>
             </div>
         </div>
@@ -131,7 +131,7 @@
                 <h4>Newsletter</h4>
                 <div class="newsletter">
                     <input type="email" placeholder="Votre email">
-                    <button>S'abonner</button>
+                    <button>S&#39;abonner</button>
                 </div>
             </div>
         </div>

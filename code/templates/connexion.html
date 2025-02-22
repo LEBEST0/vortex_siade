@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Insc-Conn</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
 
     </head>
     <body>
@@ -19,10 +19,10 @@
                     </div>
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="insc-con.html">Se connecter</a></li>
-                        </ul>
+                            <li><a href="{{ url_for('acceuil') }}">Accueil</a></li>
+                            <li><a href="{{ url_for('dashboardAgent') }}">Dashboard</a></li>
+                            <li><a href="{{ url_for('connexion') }}">Se connecter</a></li>
+                        </ul>                     
                     </nav>
                 </div>
 
@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="image/imgAcceuil.jpg" width="100%">
+                        <img src="{{ url_for('static', filename='images/imgAcceuil.jpg') }}" alt="Image d'accueil">
                     </div>
                     <div class="col-2">
                         <div class="form-container">
